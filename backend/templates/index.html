@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Processing API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .endpoint {
+            margin-bottom: 1.5rem;
+        }
+        .method {
+            font-weight: bold;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .method.GET {
+            background-color: #28a745;
+        }
+        .method.POST {
+            background-color: #ffc107;
+        }
+        .method.PUT {
+            background-color: #17a2b8;
+        }
+        .method.DELETE {
+            background-color: #dc3545;
+        }
+        code {
+            background: #e9ecef;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        pre {
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Video Processing API Documentation</h1>
+    </header>
+    <div class="container">
+        <h2>Endpoints</h2>
+        <div class="endpoint">
+            <span class="method GET">GET</span>
+            <code>/</code>
+            <p>Shows the docs</p>
+        </div>
+        <div class="endpoint">
+            <span class="method POST">POST</span>
+            <code>/upload</code>
+            <p>Uploads a video file for processing.</p>
+            <h3>Request Parameters</h3>
+            <pre>
+file: multipart/form-data
+            </pre>
+        </div>
+        <div class="endpoint">
+            <span class="method POST">POST</span>
+            <code>/process</code>
+            <p>Processes the uploaded video and performs object detection.</p>
+            <h3>Request Parameters</h3>
+            <pre>
+frame_interval: float (optional, default = 0.2)
+            </pre>
+        </div>
+        <div class="endpoint">
+            <span class="method GET">GET</span>
+            <code>/download/&lt;filename&gt;</code>
+            <p>Downloads the processed video or data CSV.</p>
+        </div>
+    </div>
+</body>
+</html>

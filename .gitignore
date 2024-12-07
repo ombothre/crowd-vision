@@ -1,0 +1,8 @@
+# Ignore __pycache__ directories
+__pycache__/
+
+# Ignore all .pt files
+*.pt
+*.csv
+*.mp4
+*.mov
