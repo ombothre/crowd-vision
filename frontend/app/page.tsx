@@ -11,7 +11,7 @@ import { useState } from 'react'
 export default function Home() {
 
   const [fileUploaded, setFileUploaded] = useState(false);
-  const backUrl = 'http://127.0.0.1:5000/'; 
+  const backUrl = 'http://127.0.0.1:8080/'; 
   const [links, setLinks] = useState({'video': '', 'csv': ''});
   const [threshold, setThreshold] = useState(0.2);
 
